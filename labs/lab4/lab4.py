@@ -89,15 +89,15 @@ def best_move(board):
 def player_move(row, col):
     if board[row][col] == ' ' and not terminal(board):
         board[row][col] = 'O'
-        buttons[row][col].config(text='O', state='disabled')
+        buttons[row][col].config(text='O', state='disabled', bg='lightblue', fg='black')
         if terminal(board):
             win = winner(board)
             if win == 'O':
-                messagebox.showinfo("Game Over", "You win!")
+                messagebox.showinfo("Game Over", "You win!", icon='info')
             elif win == 'X':
-                messagebox.showinfo("Game Over", "AI wins!")
+                messagebox.showinfo("Game Over", "AI wins!", icon='info')
             else:
-                messagebox.showinfo("Game Over", "It's a draw!")
+                messagebox.showinfo("Game Over", "It's a draw!", icon='info')
         else:
             ai_move()
 
@@ -107,15 +107,15 @@ def ai_move():
     if move:
         row, col = move
         board[row][col] = 'X'
-        buttons[row][col].config(text='X', state='disabled')
+        buttons[row][col].config(text='X', state='disabled', bg='lightgreen', fg='black')
         if terminal(board):
             win = winner(board)
             if win == 'O':
-                messagebox.showinfo("Game Over", "You win!")
+                messagebox.showinfo("Game Over", "You win!", icon='info')
             elif win == 'X':
-                messagebox.showinfo("Game Over", "AI wins!")
+                messagebox.showinfo("Game Over", "AI wins!", icon='info')
             else:
-                messagebox.showinfo("Game Over", "It's a draw!")
+                messagebox.showinfo("Game Over", "It's a draw!", icon='info')
 
 # Create the main window
 root = tk.Tk()
@@ -126,7 +126,8 @@ buttons = [[None for _ in range(3)] for _ in range(3)]
 for i in range(3):
     for j in range(3):
         buttons[i][j] = tk.Button(root, text=' ', font=('normal', 40), width=5, height=2,
-                                  command=lambda row=i, col=j: player_move(row, col))
+                                  command=lambda row=i, col=j: player_move(row, col),
+                                  bg='white', fg='black')
         buttons[i][j].grid(row=i, column=j)
 
 # Start the game
