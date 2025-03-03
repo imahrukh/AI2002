@@ -1,7 +1,7 @@
 # N-Queens Problem using Hill Climbing
 
 ## Overview
-This project implements the **N-Queens problem** using the **Hill Climbing algorithm**. The goal is to place `N` queens on an `N × N` chessboard such that no two queens attack each other. The algorithm optimizes the placement iteratively to reduce conflicts.
+This project implements the **N-Queens problem** using the **Hill Climbing algorithm** in a Jupyter Notebook (`.ipynb`). The goal is to place `N` queens on an `N × N` chessboard such that no two queens attack each other. The algorithm optimizes the placement iteratively to reduce conflicts.
 
 ## Features
 - Uses **hill climbing** to find an optimal or near-optimal solution.
@@ -27,15 +27,20 @@ This project implements the **N-Queens problem** using the **Hill Climbing algor
 
 ## Requirements
 - Python 3.x
+- Jupyter Notebook
 - No additional libraries required (uses built-in `random` module).
 
 ## Running the Code
-1. Ensure Python is installed.
-2. Run the script using:
+1. Install Jupyter Notebook if not already installed:
    ```bash
-   python n_queens_hillclimbing.py
+   pip install notebook
    ```
-3. The final board configuration will be printed as output.
+2. Open the Jupyter Notebook:
+   ```bash
+   jupyter notebook
+   ```
+3. Load and run the `Hill_Climbing_NQueens.ipynb` notebook.
+4. The final board configuration will be printed as output.
 
 ## Example Output
 ```plaintext
@@ -58,6 +63,4 @@ Final Solution:
 - Implement **Simulated Annealing** to escape local minima.
 - Add **Genetic Algorithms** for alternative optimization approaches.
 
-## Author
-Developed by an AI & Algorithm Enthusiast 🚀
 
