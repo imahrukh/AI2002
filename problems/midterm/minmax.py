@@ -69,5 +69,6 @@ nx.draw(G, pos, with_labels=True, node_size=2000, node_color="lightblue", font_s
 labels = {node: f"{node}\n({minimax_values.get(node, '')})" for node in G.nodes}
 nx.draw_networkx_labels(G, pos, labels, font_size=8, font_weight="bold")
 
+plt.savefig("game_tree.png")  # Saves the figure as an image
 plt.title("Minimax Game Tree (N=5)")
 plt.show()
