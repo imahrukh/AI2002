@@ -64,7 +64,7 @@ The genetic algorithm (GA) to solve the 8-Queens problem uses the following comp
 
 - Mutation: Each individual has a small probability of mutation, which randomly changes the position of one of the queens.
 
-###Technologies Used
+### Technologies Used
 ``` bash
     Python3
     Pygame(for graphical display in Q1)
